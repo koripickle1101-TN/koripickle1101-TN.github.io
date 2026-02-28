@@ -1,91 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kori Pickle | Healthcare Administration Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kori Pickle | Remote Healthcare Operations</title>
+<link rel="stylesheet" href="style.css">
 
+<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</head>
 <body>
 
 <div class="hero">
-    <h1>Kori Pickle</h1>
-    <p class="subtitle">
-        Remote Healthcare Administrative Operations Specialist<br>
+<h1>Kori Pickle</h1>
+<p class="subtitle">
+Remote Healthcare Administrative Operations Specialist<br>
 Healthcare Administration | Workflow Optimization | Documentation Integrity
-    </p>
-    <a href="Kori_Pickle_Resume.pdf" class="btn" target="_blank">
-        Download Resume
-    </a>
+</p>
+<a href="Kori_Pickle_Resume.pdf" class="btn" download>Download Resume</a>
 </div>
 
 <main>
 
 <section>
-    <h2>About Me</h2>
-    <p>
-        I am a Bachelor’s student at the University of Phoenix pursuing a degree in Healthcare Administration.
-        I bring strong academic training in administrative workflow organization, documentation accuracy,
-        healthcare communication, and remote operations support.
-    </p>
+<h2>Professional Summary</h2>
+<p>
+I support healthcare teams by improving documentation accuracy, organizing workflow systems, and maintaining HIPAA-compliant administrative operations in remote environments. My academic training translates directly into operational decision support, administrative precision, and scalable workflow management.
+</p>
 </section>
 
 <section>
-    <h2>Core Skills</h2>
-    <ul>
-        <li>Healthcare Administration</li>
-        <li>Administrative Support</li>
-        <li>Electronic Health Records (EHR)</li>
-        <li>Documentation & Record Organization</li>
-        <li>Data Entry Accuracy</li>
-        <li>Scheduling & Coordination</li>
-        <li>HIPAA & Confidentiality Compliance</li>
-        <li>Microsoft Office & Google Workspace</li>
-        <li>Remote Workflow Management</li>
-    </ul>
+<h2>KPI Dashboard Modeling for Operational Decision Support</h2>
+
+<div class="kpi-grid">
+<div class="kpi-card">
+<h3>Documentation Accuracy</h3>
+<p id="docAcc">98%</p>
+</div>
+
+<div class="kpi-card">
+<h3>Workflow Completion Rate</h3>
+<p id="workflowRate">95%</p>
+</div>
+
+<div class="kpi-card">
+<h3>Scheduling Efficiency</h3>
+<p id="scheduleEff">92%</p>
+</div>
+</div>
+
+<p>This dashboard models how operational metrics guide administrative performance decisions.</p>
+
 </section>
 
 <section>
-    <h2>Education</h2>
-    <p>
-        <strong>University of Phoenix</strong><br>
-        Bachelor of Science in Healthcare Administration<br>
-        Dean’s List Recognition<br>
-        Completed Courses: HCS/341, HCS/370
-    </p>
+<h2>Cover Letter Generator</h2>
+
+<textarea id="coverLetterInput" placeholder="Type company name or position..."></textarea>
+<button onclick="generateLetter()" class="btn">Generate Letter</button>
+<button onclick="downloadLetter()" class="btn secondary">Download Letter</button>
+
+<pre id="letterOutput"></pre>
+
 </section>
 
 <section>
-    <h2>Career Objective</h2>
-    <p>
-        Seeking a 100% remote healthcare administrative position where I can contribute
-        strong organizational ability, attention to detail, and professional communication
-        skills to support efficient healthcare operations.
-    </p>
+<h2>Recruiter & Stakeholder Relationship Management System</h2>
+
+<input type="text" id="recruiterName" placeholder="Recruiter Name">
+<input type="text" id="companyName" placeholder="Company">
+<select id="status">
+<option>Applied</option>
+<option>Interviewed</option>
+<option>Follow-up Sent</option>
+<option>Offer</option>
+</select>
+
+<button onclick="addRecruiter()" class="btn">Add Entry</button>
+
+<ul id="recruiterList"></ul>
+
+<p>This lightweight tracking model demonstrates structured stakeholder follow-up management.</p>
+
 </section>
 
 <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:koripickle1101@gmail.com">koripickle1101@gmail.com</a></p>
-    <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/kori-p-865jct" target="_blank">
-            View My LinkedIn Profile
-        </a>
-    </p>
-    <p>
-        Resume:
-        <a href="Kori_Pickle_Resume.pdf" target="_blank">Download Resume (PDF)</a>
-    </p>
+<h2>Education</h2>
+<p>
+<strong>University of Phoenix</strong><br>
+Bachelor of Science in Healthcare Administration<br>
+Dean’s List Recognition<br>
+Completed Courses: HCS/341, HCS/370
+</p>
+</section>
+
+<section>
+<h2>Contact</h2>
+<p>Email: <a href="mailto:koripickle1101@gmail.com">koripickle1101@gmail.com</a></p>
+<p><a href="https://www.linkedin.com/in/kori-p-865jct" target="_blank">View LinkedIn Profile</a></p>
 </section>
 
 </main>
 
 <footer>
-    <p>© 2026 Kori Pickle | Remote Healthcare Administration</p>
+<p>© 2026 Kori Pickle | Remote Healthcare Operations</p>
 </footer>
 
-</body>
+<script>
+function generateLetter() {
+const input = document.getElementById("coverLetterInput").value;
+const letter = `
+Dear Hiring Manager,
 
+I am writing to express my interest in the ${input} opportunity. 
+I bring structured workflow optimization, documentation integrity, 
+and administrative operational support experience aligned with remote healthcare environments.
+
+I would welcome the opportunity to contribute measurable administrative impact.
+
+Sincerely,
+Kori Pickle
+`;
+document.getElementById("letterOutput").textContent = letter;
+}
+
+function downloadLetter() {
+const text = document.getElementById("letterOutput").textContent;
+const blob = new Blob([text], { type: 'text/plain' });
+const link = document.createElement("a");
+link.href = URL.createObjectURL(blob);
+link.download = "Kori_Pickle_Cover_Letter.txt";
+link.click();
+}
+
+function addRecruiter() {
+const name = document.getElementById("recruiterName").value;
+const company = document.getElementById("companyName").value;
+const status = document.getElementById("status").value;
+
+const li = document.createElement("li");
+li.textContent = `${name} - ${company} - ${status}`;
+document.getElementById("recruiterList").appendChild(li);
+}
+</script>
+
+</body>
 </html>
