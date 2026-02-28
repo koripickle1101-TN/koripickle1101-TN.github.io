@@ -1,84 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kori Pickle | Healthcare Administration Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
-<body>
+header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
 
-<header>
-    <h1>Kori Pickle</h1>
-    <p>Healthcare Administration Student | Remote Healthcare Administrative Professional</p>
-</header>
+main {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
 
-<main>
+section {
+  margin-bottom: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        I am a Bachelor’s student at the University of Phoenix pursuing a degree in Healthcare Administration.
-        I bring strong academic training in administrative workflow organization, documentation accuracy,
-        healthcare communication, and remote operations support.
-    </p>
-</section>
+h1, h2 {
+  margin-top: 0;
+}
 
-<section>
-    <h2>Core Skills</h2>
-    <ul>
-        <li>Healthcare Administration</li>
-        <li>Administrative Support</li>
-        <li>Electronic Health Records (EHR)</li>
-        <li>Documentation & Record Organization</li>
-        <li>Data Entry Accuracy</li>
-        <li>Scheduling & Coordination</li>
-        <li>HIPAA & Confidentiality Compliance</li>
-        <li>Microsoft Office & Google Workspace</li>
-        <li>Remote Workflow Management</li>
-    </ul>
-</section>
+a {
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-<section>
-    <h2>Education</h2>
-    <p>
-        <strong>University of Phoenix</strong><br>
-        Bachelor of Science in Healthcare Administration<br>
-        Dean’s List Recognition<br>
-        Completed Courses: HCS/341, HCS/370
-    </p>
-</section>
+a:hover {
+  text-decoration: underline;
+}
 
-<section>
-    <h2>Career Objective</h2>
-    <p>
-        Seeking a 100% remote healthcare administrative position where I can contribute
-        strong organizational ability, attention to detail, and professional communication
-        skills to support efficient healthcare operations.
-    </p>
-</section>
-
-<section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:koripickle1101@gmail.com">koripickle1101@gmail.com</a></p>
-    <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/kori-p-865jct" target="_blank">
-            View My LinkedIn Profile
-        </a>
-    </p>
-    <p>
-        Resume:
-        <a href="Kori_Pickle_Resume.pdf" target="_blank">Download Resume (PDF)</a>
-    </p>
-</section>
-
-</main>
-
-<footer>
-    <p>© 2026 Kori Pickle | Remote Healthcare Administration</p>
-</footer>
-
-</body>
-</html>
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #e5e7eb;
+  margin-top: 40px;
+}
