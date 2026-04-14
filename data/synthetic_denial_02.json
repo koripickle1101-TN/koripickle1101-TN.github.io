@@ -1,0 +1,25 @@
+VOL EDGE RCM SYNTHETIC DATA SET 02
+PROJECT REVENUE INTEGRITY AUDIT
+FOCUS DENIAL CATCH AND PRE-SUBMISSION REJECTION
+
+{
+  "encounter_id": "VOL-865-2026-002",
+  "patient_demographics": {
+    "age": 29,
+    "gender": "F",
+    "location": "Mascot TN"
+  },
+  "clinical_notes": "Patient presents with severe right wrist pain following a fall. X-ray confirms distal radius fracture. Cast applied.",
+  "billing_data": {
+    "cpt_codes": ["29060"],
+    "icd_10_codes": ["S82.101A"],
+    "error_detected": "ICD-10 S82.101A is for Knee Fracture. Does not match Wrist CPT 29060",
+    "claim_value": 1200.00
+  },
+  "vol_edge_audit_logic": {
+    "medical_necessity_verified": false,
+    "unbundling_risk": "High",
+    "prior_auth_status": "Not Required",
+    "revenue_protection_outcome": "REJECTED - Fix Coding Mismatch Before Submission"
+  }
+}
