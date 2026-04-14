@@ -1,18 +1,20 @@
-REVENUE CYCLE INFORMATICS AND WORKFLOW ANALYSIS
-Focus: Data Integrity and SQL Audit Logic
+VOL EDGE RCM PORTFOLIO
+Focus: Healthcare Operations and Revenue Cycle Informatics
 
-STRATEGIC OBJECTIVE
-This repository serves as a technical proof of work for healthcare data modeling and revenue cycle informatics. It focuses on the intersection of SQL database auditing and operational efficiency to reduce denial rates and accelerate cash flow.
+STRATEGIC MISSION
+Developing high-performance systems for revenue integrity, clinical documentation improvement, and automated workflow logic. This portfolio serves as an operational command center for modern healthcare administration, bridging the gap between clinical data and financial performance.
 
-TECHNICAL CAPABILITIES
-Logic: SQL-driven audit trails for charge capture integrity
-Visualization: Power BI data modeling for executive reporting
-Informatics: EHR system workflow mapping and bottleneck identification
+CORE OPERATIONAL SUITE
+Vol Edge RCM Visual Hub: Architectural frameworks and systems-level visualization
+Informatics and Workflow Analysis: SQL-driven audit logic and data modeling proof
+Credentialing Framework: Systematic provider enrollment and compliance integrity
+Automation Logic: Scripted efficiency and prioritized denial routing systems
 
-OPERATIONAL FLOW
-Phase 01 Charge Capture: Auditing clinical documentation against billed units
-Phase 02 Data Validation: Identifying front-end demographic errors via SQL queries
-Phase 03 KPI Monitoring: Visualizing Net Collection Ratios and Days in AR
+TECHNICAL COMPETENCIES
+Systems: EHR Workflow Modeling and SQL Database Auditing
+Analytics: Power BI Visualization and Net Collection Ratio Tracking
+Compliance: CMS Regulatory Adherence and RAC Audit Mitigation
 
 OPERATED BY KORI PICKLE
 Healthcare Operations and RCM Specialist
+Mascot, TN and Nashville Market
