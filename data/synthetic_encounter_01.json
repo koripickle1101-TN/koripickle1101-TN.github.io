@@ -1,0 +1,25 @@
+VOL EDGE RCM SYNTHETIC DATA SET 01
+PROJECT REVENUE INTEGRITY AUDIT
+FOCUS ORTHOPEDIC SURGICAL DENIAL PREVENTION
+
+{
+  "encounter_id": "VOL-865-2026-001",
+  "patient_demographics": {
+    "age": 45,
+    "gender": "M",
+    "location": "Mascot TN"
+  },
+  "clinical_notes": "Patient presents for scheduled Total Hip Arthroplasty THA. Procedure completed without complications. Documentation supports medical necessity due to advanced osteoarthritis and failed conservative treatment.",
+  "billing_data": {
+    "cpt_codes": ["27130", "27132-50"],
+    "icd_10_codes": ["M16.11", "M16.12"],
+    "modifier_check": "Modifier 50 applied to bilateral procedure",
+    "claim_value": 35000.00
+  },
+  "vol_edge_audit_logic": {
+    "medical_necessity_verified": true,
+    "unbundling_risk": "Low",
+    "prior_auth_status": "Approved-PA-998877",
+    "revenue_protection_outcome": "Clean Claim-Ready for Submission"
+  }
+}
