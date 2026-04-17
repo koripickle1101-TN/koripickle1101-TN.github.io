@@ -1,155 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kori Pickle | Remote Healthcare Operations</title>
-<link rel="stylesheet" href="style.css">
-
-<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX');
-</script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOL SUMMIT RCM COMMAND CENTER</title>
+    <style>
+        :root { --vol-orange: #FF8200; --smokey-gray: #4B4B4B; --black: #0A0A0A; --white: #FFFFFF; }
+        body { background-color: var(--black); color: var(--white); font-family: sans-serif; margin: 0; }
+        .container { padding: 40px; max-width: 1000px; margin: auto; }
+        .header { border-left: 8px solid var(--vol-orange); padding-left: 20px; margin-bottom: 50px; }
+        h1 { font-size: 2.5rem; color: var(--vol-orange); text-transform: uppercase; }
+        .system-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .module-card { background: var(--smokey-gray); padding: 25px; border-radius: 4px; cursor: pointer; transition: 0.3s; border-bottom: 4px solid transparent; }
+        .module-card:hover { transform: scale(1.02); border-bottom: 4px solid var(--vol-orange); }
+        .status-dot { height: 10px; width: 10px; background-color: var(--vol-orange); border-radius: 50%; display: inline-block; margin-right: 10px; animation: blink 1.5s infinite; }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; align-items: center; justify-content: center; z-index: 100; }
+        .overlay-content { background: var(--smokey-gray); padding: 30px; border: 2px solid var(--vol-orange); max-width: 500px; }
+    </style>
 </head>
 <body>
-
-<div class="hero">
-<h1>Kori Pickle</h1>
-<p class="subtitle">
-Remote Healthcare Administrative Operations Specialist<br>
-Healthcare Administration | Workflow Optimization | Documentation Integrity
-</p>
-<a href="Kori_Pickle_Resume.pdf" class="btn" download>Download Resume</a>
-</div>
-
-<main>
-
-<section>
-<h2>Professional Summary</h2>
-<p>
-I support healthcare teams by improving documentation accuracy, organizing workflow systems, and maintaining HIPAA-compliant administrative operations in remote environments. My academic training translates directly into operational decision support, administrative precision, and scalable workflow management.
-</p>
-</section>
-
-<section>
-<h2>KPI Dashboard Modeling for Operational Decision Support</h2>
-
-<div class="kpi-grid">
-<div class="kpi-card">
-<h3>Documentation Accuracy</h3>
-<p id="docAcc">98%</p>
-</div>
-
-<div class="kpi-card">
-<h3>Workflow Completion Rate</h3>
-<p id="workflowRate">95%</p>
-</div>
-
-<div class="kpi-card">
-<h3>Scheduling Efficiency</h3>
-<p id="scheduleEff">92%</p>
-</div>
-</div>
-
-<p>This dashboard models how operational metrics guide administrative performance decisions.</p>
-
-</section>
-
-<section>
-<h2>Cover Letter Generator</h2>
-
-<textarea id="coverLetterInput" placeholder="Type company name or position..."></textarea>
-<button onclick="generateLetter()" class="btn">Generate Letter</button>
-<button onclick="downloadLetter()" class="btn secondary">Download Letter</button>
-
-<pre id="letterOutput"></pre>
-
-</section>
-
-<section>
-<h2>Recruiter & Stakeholder Relationship Management System</h2>
-
-<input type="text" id="recruiterName" placeholder="Recruiter Name">
-<input type="text" id="companyName" placeholder="Company">
-<select id="status">
-<option>Applied</option>
-<option>Interviewed</option>
-<option>Follow-up Sent</option>
-<option>Offer</option>
-</select>
-
-<button onclick="addRecruiter()" class="btn">Add Entry</button>
-
-<ul id="recruiterList"></ul>
-
-<p>This lightweight tracking model demonstrates structured stakeholder follow-up management.</p>
-
-</section>
-
-<section>
-<h2>Education</h2>
-<p>
-<strong>University of Phoenix</strong><br>
-Bachelor of Science in Healthcare Administration<br>
-Dean’s List Recognition<br>
-Completed Courses: HCS/341, HCS/370
-</p>
-</section>
-
-<section>
-<h2>Contact</h2>
-<p>Email: <a href="mailto:koripickle1101@gmail.com">koripickle1101@gmail.com</a></p>
-<p><a href="https://www.linkedin.com/in/kori-p-865jct" target="_blank">View LinkedIn Profile</a></p>
-</section>
-
-</main>
-
-<footer>
-<p>© 2026 Kori Pickle | Remote Healthcare Operations</p>
-</footer>
-
-<script>
-function generateLetter() {
-const input = document.getElementById("coverLetterInput").value;
-const letter = `
-Dear Hiring Manager,
-
-I am writing to express my interest in the ${input} opportunity. 
-I bring structured workflow optimization, documentation integrity, 
-and administrative operational support experience aligned with remote healthcare environments.
-
-I would welcome the opportunity to contribute measurable administrative impact.
-
-Sincerely,
-Kori Pickle
-`;
-document.getElementById("letterOutput").textContent = letter;
-}
-
-function downloadLetter() {
-const text = document.getElementById("letterOutput").textContent;
-const blob = new Blob([text], { type: 'text/plain' });
-const link = document.createElement("a");
-link.href = URL.createObjectURL(blob);
-link.download = "Kori_Pickle_Cover_Letter.txt";
-link.click();
-}
-
-function addRecruiter() {
-const name = document.getElementById("recruiterName").value;
-const company = document.getElementById("companyName").value;
-const status = document.getElementById("status").value;
-
-const li = document.createElement("li");
-li.textContent = `${name} - ${company} - ${status}`;
-document.getElementById("recruiterList").appendChild(li);
-}
-</script>
-
+    <div class="container">
+        <div class="header">
+            <h1>Vol Summit RCM™</h1>
+            <p>Operational Systems Architecture | Mascot, TN</p>
+        </div>
+        <div class="system-grid">
+            <div class="module-card" onclick="openMod('Base Camp', 'Intake Automation: High-speed patient data check.')">
+                <div class="status-dot"></div>
+                <h2>Summit Base Camp™</h2>
+                <p>Intake & Data Integrity</p>
+            </div>
+            <div class="module-card" onclick="openMod('Ascent', 'Prior Auth Engine: Automatic insurance approval logic.')">
+                <div class="status-dot"></div>
+                <h2>Summit Ascent™</h2>
+                <p>Prior Auth & Mapping</p>
+            </div>
+            <div class="module-card" onclick="openMod('Peak', 'Denial Recovery: Finding and fixing unpaid claims.')">
+                <div class="status-dot"></div>
+                <h2>Summit Peak™</h2>
+                <p>Predictive Recovery</p>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" class="overlay" onclick="closeMod()">
+        <div class="overlay-content">
+            <h2 id="m-title" style="color:var(--vol-orange)"></h2>
+            <p id="m-body"></p>
+            <p style="font-size: 0.8rem; color: var(--vol-orange);">TAP ANYWHERE TO CLOSE</p>
+        </div>
+    </div>
+    <script>
+        function openMod(t, b) {
+            document.getElementById('m-title').innerText = t;
+            document.getElementById('m-body').innerText = b;
+            document.getElementById('overlay').style.display = 'flex';
+        }
+        function closeMod() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
